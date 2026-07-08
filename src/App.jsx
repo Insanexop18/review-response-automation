@@ -6,11 +6,13 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import ApprovalQueue from './pages/ApprovalQueue/ApprovalQueue';
 import Integrations from './pages/Integrations/Integrations';
 import Settings from './pages/Settings/Settings';
+import { Background } from './components/shared/Background';
 
 function App() {
   return (
     <AppProvider>
       <Router>
+        <Background />
         <div className="app-container">
           <Sidebar />
           <div className="main-wrapper">

@@ -1,0 +1,18 @@
+export const Logo = ({ size = 32, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <defs>
+      <linearGradient id="premium-gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#6366F1"/>
+        <stop offset="1" stopColor="#A855F7"/>
+      </linearGradient>
+      <linearGradient id="premium-gradient-light" x1="64" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#3B82F6"/>
+        <stop offset="1" stopColor="#EC4899"/>
+      </linearGradient>
+    </defs>
+    <path d="M32 4L4 18V46L32 60L60 46V18L32 4Z" fill="url(#premium-gradient)" opacity="0.9"/>
+    <path d="M32 12L12 22V42L32 52L52 42V22L32 12Z" fill="url(#premium-gradient-light)"/>
+    <path d="M32 20L20 26V38L32 44L44 38V26L32 20Z" fill="#FFFFFF"/>
+    <path d="M26 30L32 34L38 30V34L32 38L26 34V30Z" fill="url(#premium-gradient)"/>
+  </svg>
+);

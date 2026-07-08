@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, CheckSquare, Settings, Share2, X, Bot } from 'lucide-react';
+import { LayoutDashboard, CheckSquare, Settings, Share2, X } from 'lucide-react';
 import { useAppContext } from '../../context/useAppContext';
+import { Logo } from './Logo';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -25,9 +26,7 @@ const Sidebar = () => {
       >
         <div className="sidebar-header">
           <div className="logo">
-            <div className="logo-icon" aria-hidden="true">
-              <Bot size={20} color="white" />
-            </div>
+            <Logo size={32} />
             <h2>RespAI</h2>
           </div>
           <button

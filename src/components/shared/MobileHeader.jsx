@@ -1,5 +1,6 @@
-import { Menu } from 'lucide-react';
+import { Menu, Bot } from 'lucide-react';
 import { useAppContext } from '../../context/useAppContext';
+import { Logo } from './Logo';
 import './MobileHeader.css';
 
 const MobileHeader = () => {
@@ -15,7 +16,7 @@ const MobileHeader = () => {
         <Menu size={24} />
       </button>
       <div className="mobile-logo">
-        <div className="logo-icon-sm pulse" aria-hidden="true"></div>
+        <Logo size={24} />
         <span>RespAI</span>
       </div>
       <div className="mobile-header-spacer" aria-hidden="true"></div>
