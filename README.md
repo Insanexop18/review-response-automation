@@ -1,127 +1,43 @@
-# 2. AI-Powered Customer Review Response Automation
+# RespAI — AI-Powered Customer Review Response Automation
 
-## Tech Stack
-- **Automation:** n8n
-- **AI:** Claude API
-- **Database:** Supabase
-- **Frontend:** Next.js
-- **Review APIs:** Google Reviews, Trustpilot, Facebook Graph API
+> **Note:** This project is currently a **highly polished frontend UI demo/prototype**. The backend infrastructure (Python, Supabase, n8n) is currently in development to make it fully production-ready. 
 
-## Directory Structure
+Managing customer reviews across multiple platforms can be incredibly overwhelming for businesses. **RespAI** is designed to solve this by providing a centralized dashboard to track, manage, and respond to reviews across platforms like Google Business Profile, Trustpilot, and Facebook using AI.
 
-```
-review-response-automation/
-├── backend/
-│   ├── workers/
-│   │   ├── __init__.py
-│   │   ├── review_fetcher.py
-│   │   ├── sentiment_analyzer.py
-│   │   ├── response_generator.py
-│   │   └── poster.py
-│   │
-│   ├── integrations/
-│   │   ├── __init__.py
-│   │   ├── google_reviews.py
-│   │   ├── trustpilot.py
-│   │   ├── facebook.py
-│   │   ├── claude_api.py
-│   │   └── slack_notifier.py
-│   │
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── review.py
-│   │   ├── response.py
-│   │   └── approval.py
-│   │
-│   ├── config.py
-│   ├── main.py
-│   ├── requirements.txt
-│   └── dockerfile
-│
-├── supabase/
-│   ├── migrations/
-│   │   ├── 001_create_reviews_table.sql
-│   │   ├── 002_create_responses_table.sql
-│   │   ├── 003_create_approval_queue.sql
-│   │   ├── 004_create_integrations_table.sql
-│   │   └── 005_create_sentiment_log.sql
-│   └── rls_policies.sql
-│
-├── n8n-workflows/
-│   ├── fetch-google-reviews.json
-│   ├── fetch-trustpilot-reviews.json
-│   ├── analyze-sentiment.json
-│   ├── generate-responses.json
-│   ├── approval-gate.json
-│   ├── post-responses.json
-│   └── escalate-negative.json
-│
-├── frontend/
-│   ├── app/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── dashboard/
-│   │   │   ├── page.tsx
-│   │   │   └── components/
-│   │   │       ├── ReviewFeed.tsx
-│   │   │       ├── SentimentBreakdown.tsx
-│   │   │       ├── ResponseMetrics.tsx
-│   │   │       └── ReviewTrends.tsx
-│   │   │
-│   │   ├── approval-queue/
-│   │   │   ├── page.tsx
-│   │   │   └── components/
-│   │   │       ├── ApprovalCard.tsx
-│   │   │       ├── ResponsePreview.tsx
-│   │   │       ├── SentimentIndicator.tsx
-│   │   │       └── ApprovalActions.tsx
-│   │   │
-│   │   ├── integrations/
-│   │   │   ├── page.tsx
-│   │   │   └── components/
-│   │   │       ├── IntegrationCard.tsx
-│   │   │       ├── GoogleReviewsSetup.tsx
-│   │   │       ├── TrustpilotSetup.tsx
-│   │   │       └── FacebookSetup.tsx
-│   │   │
-│   │   ├── settings/
-│   │   │   ├── page.tsx
-│   │   │   └── components/
-│   │   │       ├── ResponseTemplates.tsx
-│   │   │       ├── ToneSettings.tsx
-│   │   │       └── NotificationPreferences.tsx
-│   │   │
-│   │   └── api/
-│   │       ├── reviews/
-│   │       │   ├── route.ts
-│   │       │   └── [id]/route.ts
-│   │       ├── responses/
-│   │       │   ├── route.ts
-│   │       │   └── [id]/route.ts
-│   │       └── approve/
-│   │           └── route.ts
-│   │
-│   ├── lib/
-│   │   ├── supabase.ts
-│   │   ├── api-client.ts
-│   │   ├── utils/
-│   │   │   ├── sentiment-colors.ts
-│   │   │   └── formatters.ts
-│   │   └── types.ts
-│   │
-│   ├── components/
-│   │   └── shared/
-│   │       ├── Navbar.tsx
-│   │       ├── Sidebar.tsx
-│   │       └── ReviewCard.tsx
-│   │
-│   ├── .env.local
-│   └── package.json
-│
-├── docs/
-│   ├── API.md
-│   ├── SETUP.md
-│   └── N8N_WORKFLOWS.md
-│
-└── .gitignore
-```
+## ✨ Features (UI Showcase)
+
+- **Centralized Dashboard:** View all metrics, sentiment breakdowns, and recent reviews at a glance.
+- **Approval Queue:** A sleek interface to review AI-generated responses before they are published.
+- **Integrations Hub:** Connect to Google, Trustpilot, Facebook, and Slack.
+- **Premium Design:** Built with a modern, eye-friendly "Glassmorphism" light theme.
+- **Hardware-Accelerated SVGs:** Features a custom animated fluid SVG background for a truly premium feel.
+
+## 🛠 Tech Stack (Current)
+- **Frontend Framework:** React (Vite)
+- **Styling:** Pure CSS (CSS Variables, Glassmorphism, Responsive Grid)
+- **Icons & Graphics:** Custom Premium SVGs & Lucide React
+- **Routing:** React Router DOM
+
+## 🚀 Future Roadmap (Production Build)
+- **Automation:** n8n for fetching reviews and posting responses.
+- **AI Integration:** Claude API for context-aware, sentiment-analyzed responses.
+- **Database:** Supabase for storing reviews, responses, and user settings.
+- **Backend:** Python workers for data processing and API integrations.
+
+## 💻 Run the Demo Locally
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🤝 Let's Work Together!
+
+If you want to work with me, need a custom SaaS platform built, or are looking for a developer to bring your next big idea to life—let's connect! I am currently taking on custom builds and new opportunities.
+
+📧 **Contact me:** mannmangla@gmail.com
